@@ -34,7 +34,7 @@ Following basic gymnastics can be done on lists:
 
 There are shorthand notation for the last indexing method. When ```step``` is not specified, it is set to 1 by default. When ```start``` and\or ```stop``` is not specified, it is set to 0 or rather ```len(my_list)```.
  
-- ```my\_list[:3]``` Returns the first three elements of the list ```[1, 1, 2]```
+- ```my_list[:3]``` Returns the first three elements of the list ```[1, 1, 2]```
 -  ```my_list[3:]```: Returns all elements but the first three elements ```(3, 5, 8, 13]```
 
 List of lists are also possible.  They resemble multi-dimensional arrays and the elements are accessed accordingly, for example:
