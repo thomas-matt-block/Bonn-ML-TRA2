@@ -30,7 +30,7 @@ Following basic gymnastics can be done on lists:
 
 - ```len(my_list)```: Returns the amount of elements of a list (in our example the value would be ```7```)
 - ```my_list[2]```: Returns the third element of the list (in our example ```2```)
-- ```my_list[start:stop:step]```: Returns elements starting from index *start* to index *stop* in steps of *step*. For example ```my_list[1:6:2]``` would return ```[1,2,5]```
+- ```my_list[start:stop:step]```: Returns elements starting from index *start* to index *stop* in steps of *step*. For example ```my_list[1:6:2]``` would return ```[1,3,8]```
 
 There are shorthand notation for the last indexing method. When ```step``` is not specified, it is set to 1 by default. When ```start``` and\or ```stop``` is not specified, it is set to 0 or rather ```len(my_list)```.
  
@@ -123,14 +123,14 @@ a = 3
 b = 4
 
 if a < b:
-    print('a is larger than b')
-elif a > b:
     print('b is larger than a')
+elif a > b:
+    print('a is larger than b')
 else:
     print('a and b are the same')
     
 Output:
-'a is larger than b'
+'b is larger than a'
 ```
 
 Note that text is enclosed in quotes (double-quotes are also possible, but choose one type of quotation for consistency).
@@ -140,9 +140,9 @@ Note that text is enclosed in quotes (double-quotes are also possible, but choos
 
 *numpy* stands for 'numerical python' and provides structures and functions for fast numerical evaluations and should be used instead of standard lists.  *numpy* generates 'real' arrays. Here a neat functions from the *numpy*-package:
 
-- **my_array = numpy.array([[1,2],[3,4]])** Creates a 2D array of the name *my_array*
-- **my_array = numpy.linspace(0,9,10)** Creates an array of ten evenly spaced values between 0 and 9 of the name *my_array*
-- **numpy.loadtxt** Loads a formatted text file into numpy arrays.  For example if *file.txt* looks like this:
+- ```my_array = numpy.array([[1,2],[3,4]])``` Creates a 2D array of the name *my_array*
+- ```my_array = numpy.linspace(0,9,10)``` Creates an array of ten evenly spaced values between 0 and 9 of the name *my_array*
+- ```numpy.loadtxt``` Loads a formatted text file into numpy arrays.  For example if *file.txt* looks like this:
 ```python
 x,y
 0.2,0.4
@@ -154,8 +154,8 @@ we can load the file like this:
 ```python
 import numpy as np
 
-data = numpy.loadtxt('file.txt', delimiter= ',',
-					  usecols = (0,1), skiprows = 1)
+data = np.loadtxt('file.txt', delimiter= ',',
+			      usecols = (0,1), skiprows = 1)
 print(data)
 
 Output:
@@ -184,9 +184,9 @@ Very similar to lists we can access elements, or even whole subsets, of an array
 ```
 my_array = np.array([[1,3,5],[2,4,7],[3,6,9]])
 ```
-- **my_array[0]** selects the first array (or first row). Output:  ``` [1,3,5]```
-- **my_array[1, 2]** selects the third element of the second array. Output: ```7```
-- **my_array[:, 1]** selects from all arrays the second element (or the second column). Output: ```[3,4,6]```
+- ```my_array[0]``` selects the first array (or first row). Output:  ``` [1,3,5]```
+- ```my_array[1, 2]``` selects the third element of the second array. Output: ```7```
+- ```my_array[:, 1]``` selects from all arrays the second element (or the second column). Output: ```[3,4,6]```
 
 ## 6		Plotting with *matplotlib*
 
